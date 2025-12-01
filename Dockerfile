@@ -7,6 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Render will assign $PORT automatically
 EXPOSE $PORT
 
-CMD ["bash", "-c", "streamlit run main.py --server.address=0.0.0.0 --server.port=$PORT"]
+# Use python -m streamlit (Fixes: "streamlit: command not found")
+CMD ["bash", "-c", "python -m streamlit run main.py --server.address=0.0.0.0 --server.port=$PORT"]
