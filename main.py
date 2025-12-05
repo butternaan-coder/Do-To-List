@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from datetime import datetime
 
-API_URL = "http://127.0.0.1:8000"   # your FastAPI server
+API_URL = "https://to-do-list-app-server.onrender.com"   # your FastAPI server
 
 st.title("🌟 Simple To-Do Client (Streamlit + FastAPI)")
 
